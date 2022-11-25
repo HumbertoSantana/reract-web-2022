@@ -1,7 +1,8 @@
+import './style.scss';
 
 const AppHeader = () => {
   return(
-    <div>
+    <div className='app-header'>
       APP HEADER
     </div>
   )
