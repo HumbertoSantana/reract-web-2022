@@ -1,9 +1,15 @@
-function App() {
+import { Route, Routes } from "react-router-dom"
+import MainLayout from "./screens/Layout/MainLayout/MainLayout"
+import WelcomeScreen from "./screens/Welcome/WelcomeScreen/WelcomeScreen"
+import { ROUTES } from "./utils/enums/routes"
 
+function App() {
   return (
-    <div>
-      REACT WEB 2022
-    </div>
+    <Routes>
+      <Route path={ROUTES.home} element={<MainLayout />} >
+        <Route index element={<WelcomeScreen />}/>
+      </Route>
+    </Routes>
   )
 }
 
